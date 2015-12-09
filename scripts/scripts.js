@@ -4,14 +4,14 @@ var App = {
 
 	// Run if we do have camera support
 	successCallback : function(stream) {
-        console.log('yeah! camera support!');
-        if(window.webkitURL) {
-			App.video.src = window.webkitURL ? window.webkitURL.createObjectURL(stream) : stream;
-        }
-        else {
-			App.video.src = stream;
-        }
-    },
+        	console.log('yeah! camera support!');
+		if (window.URL) {
+        		App.video.src = window.URL.createObjectURL(stream);
+    		} else {
+	        	App.video.src = stream; // Opera.
+		}
+		App.start();
+    	},
 
 	// run if we dont have camera support
 	errorCallback : function(error) {
