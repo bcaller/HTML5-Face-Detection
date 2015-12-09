@@ -115,7 +115,7 @@ App.init = function() {
 
 	// Finally Check if we can run this puppy and go!
 	if (navigator.getUserMedia) {
-		navigator.getUserMedia('video', App.successCallback, App.errorCallback);
+		navigator.getUserMedia({'video':true}, App.successCallback, App.errorCallback);
 	}
 
 	// App.start();
