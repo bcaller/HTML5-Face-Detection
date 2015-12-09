@@ -10,7 +10,7 @@ var App = {
     		} else {
 	        	App.video.src = stream; // Opera.
 		}
-		App.start();
+		App.start('glasses');
     	},
 
 	// run if we dont have camera support
